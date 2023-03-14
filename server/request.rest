@@ -1,0 +1,54 @@
+GET  http://localhost:3001/todos
+Content-Type: application/json
+
+{   
+  "userName": "coder"
+}
+
+###
+POST http://localhost:3001/todo/new
+Content-Type: application/json
+
+{   "userName": "coder",
+    "text":"billion $ code"
+                                                        
+}
+
+###
+POST http://localhost:3001/user/signup
+Content-Type: application/json
+
+{
+  "userName": "coder",
+    "email": "fucker@example.com",
+    "password": "password123"
+}
+
+###
+POST http://localhost:3001/user/login
+Content-Type: application/json
+
+{
+  "userName": "coder",
+    "password": "password123"
+}
+
+###
+PUT http://localhost:3001/todo/complete/640c68444e04017dd710e9cc
+
+# const addTodo = async () => {
+#         const data = await fetch(api_base + "/todo/new", {
+#             method: "POST",
+#             headers: {
+#                 "Content-Type": "application/json"
+#             },
+#             body: JSON.stringify({
+#                 text: newTodo
+#             })
+#         }).then(res => res.json());
+
+#         setTodos([...todos, data]);
+
+#         setPopupActive(false);
+#         setNewTodo("");
+#     }
